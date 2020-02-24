@@ -58,7 +58,7 @@ def get_map(dct, name):
                                    icon=icon))
     friends_map.add_child(fg)
     friends_map.add_child(folium.LayerControl())
-    friends_map.save("./templates/" + name + "_map.html")
+    friends_map.save("templates/" + name + "_map.html")
 
 
 def main(name):
