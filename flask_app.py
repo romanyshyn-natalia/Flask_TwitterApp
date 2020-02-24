@@ -12,9 +12,13 @@ def index():
 @app.route('/get_name', methods=["POST"])
 def get_name():
     name = request.form.get("name")
-    create_map.main(name)
-    return render_template(name + "_map.html")
+    if name:
+        create_map.main(name)
+        return render_template(name + "_map.html")
+    return redirect('/')    
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=3456)    
+
+
