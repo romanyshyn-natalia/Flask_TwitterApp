@@ -30,7 +30,7 @@ def get_coordinates(dictionary):
     'grekhov': [(49.4871968, 31.2718321), 'http://pbs.twimg.com/profile_images/1144131486523764736/Un_JwqvK_normal.png']}
     '''
     coordinates_dict = {}
-    geolocator = Nominatim(user_agent="specify_your_app_name_here")
+    geolocator = Nominatim(user_agent="Flask_TwitterApp")
     for key in dictionary:
         spot = dictionary[key][0]
         try:
