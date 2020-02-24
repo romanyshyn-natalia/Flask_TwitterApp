@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+
+
+{% extends "layout.html" %}
+
+{% block heading %}
+    Hello!
+    Type Twitter name:
+{% endblock %}
+
+{% block body %}
+    <form action="{{ url_for('get_name') }}" method="post">
+        <input type="text" name="name" placeholder="Enter Twitter Name">
+        <button>Submit</button>
+    </form>
+{% endblock %};
