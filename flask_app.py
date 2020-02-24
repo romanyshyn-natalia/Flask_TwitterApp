@@ -13,7 +13,7 @@ def index():
 def get_name():
     name = request.form.get("name")
     create_map.main(name)
-    return render_template("/" + name + "_map.html")
+    return render_template(name + "_map.html")
 
 
 if __name__ == '__main__':
